@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Tip calculator app | frontendmentor challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;
+700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <img src="images/logo.svg" alt="Splitter" id="logo">
+  <form>
+    <div id="input">
+      <div class="bill-cont">
+        <label for="bill">Bill</label>
+        <div class="bill-input-cont">
+          <img src="images/icon-dollar.svg" alt="" aria-hidden="true">
+          <input type="number" id="bill" name="bill" placeholder="0">
+        </div>
+      </div>
+      <fieldset id="select-tip">
+        <legend>Select tip</legend>
+        <div id="btn-container">
+            <div class="btn-cont">
+              <input type="radio" name="tipChoice" id="5" value="5%" class="tipPercent">
+                <label for="5%" class="tip-label">5%</label>
+              </div>
+              <div class="btn-cont">
+                <input type="radio" name="tipChoice" id="10" value="10%" class="tipPercent" checked>
+                <label for="10%" class="tip-label">10%</label>
+              </div>
+              <div class="btn-cont">
+                <input type="radio" name="tipChoice" id="15" value="15%" class="tipPercent">
+                <label for="15%" class="tip-label">15%</label>
+              </div>
+              <div class="btn-cont">
+                <input type="radio" name="tipChoice" id="25" value="25%" class="tipPercent">
+                <label for="25%" class="tip-label">25%</label>
+              </div>
+              <div class="btn-cont">
+                <input type="radio" name="tipChoice" id="50" value="50%" class="tipPercent">
+                <label for="50%" class="tip-label">50%</label>
+              </div>
+              <div class="btn-cont customBtn">
+                  <input type="number" name="custom" id="customInput" class="tipPercent custom" min="0" max="100" placeholder="Custom">
+                <label for="customInput" class="tip-label">Custom</label>
+                <input type="radio" id="custom" name="tipChoice" class="tipPercent">
+                <label for="custom">Custom</label>
+              </div>
+        </div>
+    </fieldset>
+      <div class="people-cont">
+        <label for="number-people" class="people">Number of people 
+          <span id="warning" class="red-when-zero-people no-warning">Can't be zero</span>
+        </label>
+        <div class="people-input-cont">
+          <img src="images/icon-person.svg" alt="" aria-hidden="true">
+          <input type="number" name="number-people" id="number-people" placeholder="0"  min="0" max="100" class="ja ">
+          </div>
+      </div>
+    </div>
+    <div id="output" aria-live="polite">
+        <div class="output-numbers">
+          <p id="tip-person">Tip Amount<br><span>/ person</span></p>
+          <p id="tipSum">$0.00</p>
+        </div>
+        <div class="output-numbers totalOutput">
+          <p id="total-person">Total<br><span>/ person</span></p>
+          <p id="totalSum">$0.00</p>
+        </div>
+        <input type="reset" value="Reset" id="reset" name="reset" class="empty">
+        <label for="reset" class="hide-visually">Reset</label>
+    </div>
+  </form>
+    </form>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://twitter.com/ellienndea" target="_blank" rel="noreferrer">Linda</a>.
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+    
