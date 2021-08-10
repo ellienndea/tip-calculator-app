@@ -18,7 +18,7 @@
     <img src="images/logo.svg" alt="Splitter" id="logo">
   </header>
   <form>
-    <div id="input">
+    <main id="input">
       <div class="bill-cont">
         <label for="bill">Bill</label>
         <div class="bill-input-cont">
@@ -30,24 +30,24 @@
         <legend>Select tip</legend>
         <div id="btn-container">
             <div class="btn-cont">
-              <input type="radio" name="tipChoice" id="5" value="5%" class="tipPercent">
-                <label for="5" class="tip-label">5%</label>
+              <input type="radio" name="tipChoice" id="tip5" value="5%" class="tipPercent">
+                <label for="tip5" class="tip-label">5%</label>
               </div>
               <div class="btn-cont">
-                <input type="radio" name="tipChoice" id="10" value="10%" class="tipPercent" checked>
-                <label for="10" class="tip-label">10%</label>
+                <input type="radio" name="tipChoice" id="tip10" value="10%" class="tipPercent" checked>
+                <label for="tip10" class="tip-label">10%</label>
               </div>
               <div class="btn-cont">
-                <input type="radio" name="tipChoice" id="15" value="15%" class="tipPercent">
-                <label for="15" class="tip-label">15%</label>
+                <input type="radio" name="tipChoice" id="tip15" value="15%" class="tipPercent">
+                <label for="tip15" class="tip-label">15%</label>
               </div>
               <div class="btn-cont">
-                <input type="radio" name="tipChoice" id="25" value="25%" class="tipPercent">
-                <label for="25" class="tip-label">25%</label>
+                <input type="radio" name="tipChoice" id="tip25" value="25%" class="tipPercent">
+                <label for="tip25" class="tip-label">25%</label>
               </div>
               <div class="btn-cont">
-                <input type="radio" name="tipChoice" id="50" value="50%" class="tipPercent">
-                <label for="50" class="tip-label">50%</label>
+                <input type="radio" name="tipChoice" id="tip50" value="50%" class="tipPercent">
+                <label for="tip50" class="tip-label">50%</label>
               </div>
               <div class="btn-cont customBtn">
                   <input type="number" name="custom" id="customInput" class="tipPercent custom" min="0" max="100" placeholder="Custom">
@@ -56,7 +56,7 @@
                 <label for="custom">Custom</label>
               </div>
         </div>
-    </fieldset>
+      </fieldset>
       <div class="people-cont">
         <label for="number-people" class="people">Number of people 
           <span id="warning" class="red-when-zero-people no-warning">Can't be zero</span>
@@ -66,19 +66,19 @@
           <input type="number" name="number-people" id="number-people" placeholder="0"  min="0" max="100" class="ja ">
           </div>
       </div>
-    </div>
-    <div id="output" aria-live="polite">
-        <div class="output-numbers">
-          <p id="tip-person">Tip Amount<br><span>/ person</span></p>
-          <p id="tipSum">$0.00</p>
-        </div>
-        <div class="output-numbers totalOutput">
-          <p id="total-person">Total<br><span>/ person</span></p>
-          <p id="totalSum">$0.00</p>
-        </div>
-        <input type="reset" value="Reset" id="reset" name="reset" class="empty">
-        <label for="reset" class="hide-visually">Reset</label>
-    </div>
+    </main>
+    <main id="output" aria-live="polite">
+      <div class="output-numbers">
+        <p id="tip-person">Tip Amount<br><span>/ person</span></p>
+        <p id="tipSum">$0.00</p>
+      </div>
+      <div class="output-numbers totalOutput">
+        <p id="total-person">Total<br><span>/ person</span></p>
+        <p id="totalSum">$0.00</p>
+      </div>
+      <input type="reset" value="Reset" id="reset" name="reset" class="empty">
+      <label for="reset" class="hide-visually">Reset</label>
+    </main>
   </form>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
