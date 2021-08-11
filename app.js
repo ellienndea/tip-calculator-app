@@ -13,15 +13,17 @@ let selectTip = document.getElementById("select-tip");
 function tipChoice(){ 
     let radios = document.getElementsByName("tipChoice");/* radio group */
     for(let i=0; i<radios.length;i++){
+        console.log(radios[5])
             if(radios[i].checked){/* checked radio btn -> value tip percent */
                 if(radios[i].id == "custom"){/* if custom value should be put in */
                     let customInput = document.getElementById("customInput");
                     customInput.focus();/* moves focus to number input */
+                    radios[5].checked = true;
                     tipValue = parseFloat(customInput.value);
                     return tipValue;
                     
                 } else{ 
-                    customInput.removeAttribute("focus");/* removes focus if custom was checked before */
+                    customInput.blur();/* removes focus if custom was checked before */
                     let tipValue = parseFloat(radios[i].value);/* if radio btn with % is checked -> direct value tip percent */
                     return tipValue;
             }}

@@ -150,6 +150,7 @@ form {
                 input[type=radio]:checked ~ label {
                     background: var(--strong-cyan);
                     color: var(--very-dark-cyan);
+                    box-shadow: 0 0 0 4px var(--light-cyan);
                 }
                 
                 /* makes default radio btns invisible */
@@ -168,7 +169,7 @@ form {
                 .btn-cont:hover  label{
                     background: var(--light-cyan);
                     color: var(--very-dark-cyan);
-                }   
+                } 
                /* customBtn -container to stack radio and input */
                 .customBtn label {
                     background: var(--light-grayish-cyan2);
@@ -189,7 +190,7 @@ form {
                     opacity: 0;
                 }
                 #customInput {
-                    opacity: 100;
+                    opacity: 1;
                     background: transparent;
                     border: 2px solid transparent;
                     text-align: center;
@@ -210,6 +211,14 @@ form {
                 }
                 .people-cont {
                     position: relative;
+                }
+                /* last rule with high specificity to overwrite ... */
+                #custom:checked + #custom-label {
+                    color: transparent;
+                    background: var(--light-grayish-cyan2);
+                }
+                #btn-container  input[type="radio"]:focus + label {
+                    box-shadow: 0 0 0 4px var(--light-cyan);
                 }
         #output {
             background: var(--very-dark-cyan);
