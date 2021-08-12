@@ -26,18 +26,22 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     align-content: space-evenly;
     min-height: 100vh;
 }
 /* - Mobile: 375px
 - Desktop: 1440px */
 /* mobile first, from outter to inner boxes */
+h1 {
+    font-size: 1px;
+    color: transparent;
+}
 #logo {
     align-self: center;
     width: 8.67rem;
     height: auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 form {
     max-width: 37.5rem;
@@ -45,7 +49,7 @@ form {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 4.05rem;
+    margin-top: 3rem;
     border-radius: 1rem;
     background: hsl(0, 0%, 100%);
     padding: 3.2rem 2.4rem;
@@ -223,6 +227,7 @@ form {
         #output {
             background: var(--very-dark-cyan);
             padding: 3.6rem 2.4rem 2.4rem 2.4rem;
+            border-radius: 1rem;
         }
         /* inside output */
             .output-numbers {
@@ -231,9 +236,11 @@ form {
             /* choose all p elem with an id ending with "person" by attribute selector */
             p[id$="person"]{
                 font-size: 1.6rem;
+                color: hsl(0, 0%, 100%);
             }
             p[id$="person"] span{
                 font-size: 1.3rem;
+                color: var(--dark-grayish-cyan2);
             }
             .totalOutput {
                 margin-top: 2rem;
@@ -272,16 +279,15 @@ form {
             background: var(--empty-cyan);
             color: var(--very-dark-cyan);
         }
+        .attribution {
+            font-size: 1.7rem;
+        }
         /* media-queries for desktop version */
         @media (min-width: 925px) {
-                #logo {
-                    margin-top: 16.3rem;
-                }
                 form {
                     width: 100%;
                     max-width: 92rem;
                     height: 48.1rem;
-                    margin-top: 8.79rem;
                     padding: 3.2rem 3.2rem 3.2rem 4.8rem;
                     justify-content: space-between;
                 }
@@ -291,6 +297,7 @@ form {
                 #input {
                     width: 37.9rem;
                     height: 38.8rem;
+                    margin-right: 3.2rem;
                 }
                     .bill-cont {
                         margin-top: 0;
