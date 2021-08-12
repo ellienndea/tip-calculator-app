@@ -31,7 +31,7 @@ function tipChoice(){
 selectTip.addEventListener("click", ()=> tipChoice());/* if tip percent btn is clicked tip % value gets (re-)calculated */
     
     /*  */
-    document.addEventListener("change",function(){
+    document.addEventListener("keyup",function(){
         updateTipPercent();/* if anything changes,tip % value gets (re-)calculated  */
         let billVal = document.getElementById("bill").value;
         let bill = parseInt(billVal,10);
